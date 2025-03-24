@@ -1,0 +1,169 @@
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10vw 0vw;
+}
+
+.firstSection > div {
+    width: 40%;
+}
+
+.leftSection {
+    width: 30%;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+}
+.name {
+    color: purple;
+}
+
+.rightSection {
+    width: 30%;
+}
+
+.Developer-img {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 1vw auto;}
+
+#element {
+    color: purple;
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.secondSection .line {
+   
+    min-width: 80vw;
+    
+    margin: 1.5vw 0vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+main hr {
+    border: 0;
+    background-color: rgb(8, 2, 52);
+    height: 1.2px;
+    margin: 2vw 2.1vw;
+}
+
+.text-grey {
+    color: gray;
+}
+
+
+
+.boxee{
+    margin: auto;
+ 
+    
+}
+.know-box {
+    padding: 1.5rem;
+    background-color: grey;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+    overflow: scroll; 
+    transition: 1s all 0.1ms ease-in-out;
+}
+
+.know-box:hover {
+    background-color:white;
+    transform: scale(1.2, 1.2);
+    border-radius: 7%;
+    color: black;
+    font-size: 0.8rem;
+
+}
+.kbc1{
+    position: relative;
+    font-size: 2.1rem;
+    color: #0f0f0f;
+}
+
+.imggg{
+    width: 20vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: 5vw 5vw;
+    background-position: center;
+    margin-bottom: 1rem;
+
+}
+.ig1{
+    background-image: url('img/java-logo-transparent-free-png.webp');
+
+}
+.ig2{
+    background-image: url('img/Python-logo-removebg-preview.png');
+}
+.ig3{
+    background-image: url('img/html-css-js.png');
+}
+
+
+
+@media (max-width: 1100px) {
+    .secondSection .line {
+        max-width: 80vw;
+        margin: 1.5vw 0vw;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .rightSection img {
+        width: 80%; 
+    }
+
+    .know-box {
+        padding: 1.5rem;
+        background-color: grey;
+        width: 20vh;
+        height: 30vh;
+        border-radius: 10%;
+        overflow: scroll; 
+        transition: 1s all 0.1ms ease-in-out;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+    }
+    .firstSection > div {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .leftSection {
+        font-size: 2rem;
+    }
+    .rightSection {
+        width: 100%;
+    }
+    .Developer-img {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .btn {
+        width: 20vw;
+        height: 6vw;
+        font-size: 1rem;
+    }
+}
+
+ 

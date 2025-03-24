@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Singh - Portfolio</title>
+    <link rel="stylesheet" href="whole.css">
+    <link rel="stylesheet" href="about.css">
+ 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Ayush's Portfolio</div>
+            <div class="Right">
+                <ul>
+                    <li> <a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <header class="studentOverview">
+        <span class="nmg">Ayush Singh</span>
+        <div class="stdImg"></div>
+        <p>Success is not a one-day achievement, it's a destination of a long journey</p>
+        <div class="contacts">
+            <a href="mailto:ayush@example.com">Email</a> | <a href="https://www.linkedin.com/in/ayushsingh">LinkedIn</a> | <a href="https://github.com/ayushsingh">GitHub</a>
+        </div>
+    </header>
+
+
+    <section class="wlc">
+        <h3>Welcome to Ayush Singh's Portfolio</h3>
+        <p>I'm Ayush Singh, currently pursuing my B-Tech degree in the field of Computer Science and Engineering along with a Bachelor's in Data Science and Applications.</p>
+        <p>I am passionate about competitive coding and modern techniques of problem-solving.</p>
+        <p>I have a huge interest in the fields of Development, Artificial Intelligence, and Data Science.</p>
+    </section>
+
+    <section class="Academics">
+        <h1>Academics</h1>
+        <h2>Academic History</h2>
+        <ul>
+            <li>Completed High School</li>
+            <li>Completed Senior School</li>
+            <li>Currently pursuing Undergraduate Degree</li>
+        </ul>
+
+        <div class="college">
+            <h2>Ajay Kumar Garg Engineering College</h2>
+            <h3>Affiliated with Abdul Kalam Technical University, Lucknow | India</h3>
+            <h4>B-Tech | Computer Science Engineering</h4>
+            <p>Under a 4-year program (2024 - 2028)</p>
+
+            <h2>Indian Institute of Technology, Madras, India</h2>
+            <h4>B.S | Data Science</h4>
+            <p>Under a foundation course (2025 - 2026), followed by a 3-year degree program.</p>
+        </div>
+
+        <div class="school">
+            <h2>Shivbrat Singh Children Academy</h2>
+            <h3>Affiliated with CBSE, New Delhi | India</h3>
+        </div>
+    </section>
+
+    
+    <section class="projects">
+        <h1>Projects</h1>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>A brief description of the project goes here. Include any technologies used, challenges faced, and outcomes achieved.</p>
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>A brief description of the project goes here. Include any technologies used, challenges faced, and outcomes achieved.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h1>Skills</h1>
+        <div class="skill">
+            <h3>Technical Skill 1</h3>
+            <p>Detailed description of the technical skill, proficiency level, and how it was used in your academic or personal projects.</p>
+        </div>
+        <div class="skill">
+            <h3>Technical Skill 2</h3>
+            <p>Detailed description of the technical skill, proficiency level, and how it was used in your academic or personal projects.</p>
+        </div>
+    </section>
+
+
+    <section class="experience">
+        <h1>Experience</h1>
+        <div class="work">
+            <h3>Internship at XYZ Company</h3>
+            <p>A brief description of the role, responsibilities, and skills gained during the internship or job experience.</p>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <h1>Certifications</h1>
+        <div class="certificate">
+            <h3>Certification Title 1</h3>
+            <p>Brief description of the certification and what knowledge or skill it represents.</p>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <p>Contact me via <a href="mailto:ayush@example.com" style="color: white;">email</a> for collaborations or inquiries.</p>
+        <p>&copy; 2025 Ayush Singh. All rights reserved.</p>
+    </div>
+<script>
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+    let gf = document.querySelectorAll(".nav-link");
+    let wrt = window.location.href;
+    gf.forEach(e=>{
+        if(wrt.includes(`${e.getAttribute("href")}`))
+    {
+        e.classList.add("active");
+    }
+        
+    })
+
+
+
+
+
+
+})
+
+   
+
+
+
+
+</script>
+</body>
+</html>

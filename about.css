@@ -1,0 +1,87 @@
+
+ body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    text-align: center;
+    
+    position: relative;
+}
+.stdImg {
+    background-image: url('img/bkg.jpg');
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+.nmg{
+    font-size: 2rem;
+    color: purple;
+    font-weight: bold;
+}
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+header .contacts a {
+    color: white;
+    margin: 0 10px;
+    text-decoration:solid;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    color: black;
+    background-color: rgb(129, 20, 225);
+    
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(35, 11, 193, 0.76);
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+}
+
+.myprogressBar {
+    width: 100%;
+    
+    margin: 10px 0;
+}
+
+.projects, .skills, .experience, .certifications {
+    background-color: rgb(129, 20, 225);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.projects .project, .skills .skill, .experience .work, .certifications .certificate {
+    background-color: #f9f9f9;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects .project h3, .skills .skill h3, .experience .work h3, .certifications .certificate h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects, .skills, .experience, .certifications {
+        grid-template-columns: 1fr;
+    }
+}

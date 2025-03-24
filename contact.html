@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="whole.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body style=" min-height: 200vh;">
+    <header>
+        <nav>
+            <div class="left">Ayush's Portfolio</div>
+            <div class="Right">
+                <ul>
+                    <li> <a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-c">
+        <h1 class="h1-c">Contact me from any of the following...</h1>
+        <h3 class="h3-c">My Social Media Handles:</h3>
+
+        <div class="centerBox">
+            <div class="btn1">
+                <div class="insta">
+          
+                </div>
+                <button class="btn" onclick="cbtn1()">Get Instagram</button>
+            </div>
+
+            <div class="btn1 ">
+                <div class="wtsp">
+                
+                </div>
+                <button class="btn" onclick="cbtn3()">Get WhatsApp</button>
+            </div>
+
+            <div class="btn1">
+                    <div class="gmail">
+                  
+                    </div>
+                    <button class="btn" onclick="cbtn2()">Get Gmail</button>
+            </div>
+
+        </div>
+        <div class="hth   ps1"></div>
+        <div class="hth  ps2"></div>
+    </main>
+    
+    <div class="footer">
+        <p>Contact me via <a href="mailto:ayush@example.com" style="color: white;">email</a> for collaborations or inquiries.</p>
+        <p>&copy; 2025 Ayush Singh. All rights reserved.</p>
+    </div>
+    <script>
+        function cbtn1() {
+            window.open("https://www.instagram.com/direct/t/ 56964672033/", "_blank");
+        }
+
+        function cbtn2() {
+            window.location.href = "mailto:ayurajput249@gmail.com";
+        }
+
+        function cbtn3() {
+            window.open("https://wa.me/7897573949", "_blank");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let links = document.querySelectorAll(".nav-link");
+            let currentPage = window.location.href;
+
+            links.forEach((e) => {
+                if (currentPage.includes(e.getAttribute("href"))) {
+                    e.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+<script src="script.js"></script>
+
+</html>

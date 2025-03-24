@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio</title>
+    <link rel="stylesheet" href="whole.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body style="min-height: 250vh;">
+    <header>
+        <nav>
+            <div class="left">Ayush's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="h11">Explore My Work</h1>
+        <h2 class="h22">Take a look at 
+            <span class="mp11">My Projects</span>
+        </h2>
+    </header>
+
+    <main class="maincont">
+        <div class="project">
+            <div class="rightImg bgg1"></div>
+            <div class="leftInfo">
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+                <p></p>
+                <input type="text" placeholder="Leave a comment or review">
+                <div class="comments"></div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="rightImg bgg2"></div>
+            <div class="leftInfo">
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+                <p></p>
+                <input type="text" placeholder="Leave a comment or review">
+                <div class="comments"></div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="rightImg bgg3"></div>
+            <div class="leftInfo">
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+                <p></p>
+                <input type="text" placeholder="Leave a comment or review">
+                <div class="comments"></div>
+            </div>
+        </div>
+
+     
+        <div class="project">
+            <div class="rightImg bgg4"></div>
+            <div class="leftInfo">
+                <h1>FARMINGOO</h1>
+                <p>FARMINGOO is an innovative platform bridging the gap between the primary and tertiary sectors through modern technology.</p>
+                <h2>Technologies Used</h2>
+                <p>The frontend of the platform is built using HTML, CSS, and JavaScript.</p>
+                <p>The backend development leverages Spring Boot along with SQL (Database Management System).</p>
+                <h2>Key Features</h2>
+                <p>The platform includes the following functionalities:</p>
+                <ol>
+                    <li>Vehicle Booking System</li>
+                    <li>Order Management System</li>
+                    <li>AI-Powered ChatBot</li>
+                    <li>Search and Filter Tools</li>
+                    <li>User Registration and Login</li>
+                    <li>Weather Support Integration</li>
+                </ol>
+                <h3>Active Contributors</h3>
+                <ol class="contribb">
+                    <li><a href="">Ayush Thakur</a></li>
+                    <li><a href="">Chaitanya Gidwani</a></li>
+                </ol>
+                <input type="text" placeholder="Leave a comment or review">
+                <div class="comments"></div>
+            </div>
+        </div>
+
+    </main>
+    
+    <div class="footer">
+        <p>Contact me via <a href="mailto:ayush@example.com" style="color: white;">email</a> for collaborations or inquiries.</p>
+        <p>&copy; 2025 Ayush Singh. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let links = document.querySelectorAll(".nav-link");
+            let currentPage = window.location.href;
+
+            links.forEach((e) => {
+                if (currentPage.includes(e.getAttribute("href"))) {
+                    e.classList.add("active");
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            let cards = document.querySelectorAll(".rightImg");
+            
+            cards.forEach((card) => {
+                let rotationAngle = 0;
+                let rotationInterval;  // Define the interval for each card separately
+    
+                // Function to rotate the card
+                function rotateCard() {
+                    rotationAngle += 0.5;
+                    card.style.transform = `rotateY(${rotationAngle}deg)`;
+                }
+    
+                // Start rotating the card at a set interval
+                function startRotation() {
+                    rotationInterval = setInterval(rotateCard, 16);  // approx 60 frames per second
+                }
+    
+                // Stop rotating the card
+                function stopRotation() {
+                    clearInterval(rotationInterval);  // Stop the interval
+                }
+    
+                // Start rotation initially
+                startRotation();
+    
+                // Stop the rotation when the mouse hovers over the image
+                card.addEventListener("mouseover", () => {
+                    stopRotation();
+                    card.style.transform = ``;
+                });
+    
+                // Resume rotation when the mouse leaves the image
+                card.addEventListener("mouseleave", () => {
+                    startRotation();
+                });
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
