@@ -6,18 +6,20 @@
     <title>Ayush Singh - Portfolio</title>
     <link rel="stylesheet" href="whole.css">
     <link rel="stylesheet" href="about.css">
+    <script src="script.js"></script>
  
 </head>
 <body>
     <header>
         <nav>
             <div class="left">Ayush's Portfolio</div>
-            <div class="Right">
-                <ul>
-                    <li> <a href="index.html" class="nav-link">Home</a></li>
+            <button class="heinberger" onclick="y()">|||</button>
+            <div class="right">
+                <ul class="navliii">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -136,6 +138,28 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
    
+
+var fg = document.querySelector(".navliii");
+
+function y() {
+    // Toggle the 'show' class to control visibility
+    fg.classList.toggle("show");
+
+    // Display the menu only when it is active
+    if (fg.classList.contains("show")) {
+        fg.style.display = "block"; 
+    } else {
+        fg.style.display = "none";
+    }
+}
+
+// Close menu when clicking a navigation link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        fg.classList.remove("show");
+        fg.style.display = "none"; 
+    });
+});
 
 
 
