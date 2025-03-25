@@ -14,8 +14,9 @@
     <header>
         <nav>
             <div class="left">Ayush's Portfolio</div>
+            <button class="heinberger" onclick="y()">|||</button>
             <div class="right">
-                <ul>
+                <ul class="navliii">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
@@ -32,12 +33,37 @@
 
     <main class="maincont">
         <div class="project">
+            <div class="rightImg bgg3"></div>
+            <div class="leftInfo">
+                <h1>Medicoo</h1>
+                <p>A ultimate website for the online consultancy of the Doctol with many more features</p>
+                <h2>Technologies Used</h2>
+                <p>HTML,Css,Tailwind Css,JavaScript,Node js</p>
+                <h3>Key Features</h3>
+                <p><li>Consits of Doctor consultancy</li>
+                <li>Doctor Appointment</li>
+                     <li>Diet Plans</li></p>
+                <input type="text" placeholder="Leave a comment or review">
+                <div class="comments"></div>
+            </div>
+        </div>
+
+        <div class="project">
             <div class="rightImg bgg1"></div>
             <div class="leftInfo">
-                <h1></h1>
-                <h2></h2>
-                <h3></h3>
-                <p></p>
+                <h1>A simple Music Player</h1>
+                <p>I tried to make a website of my own with the list of the my favourite Songs ,So that I can listen them on my own</p>
+                <h2>Technologies Used</h2>
+                <p>HTML,CSS,JavaScript
+
+                </p>
+                <h3>Key Features</h3>
+                <p>Consits of the play option,pause and change songs and time duration</p>
+                <h3>Active Contributors</h3>
+                <ol class="contribb">
+                    <li><a href="">Ayush Thakur</a></li>
+                    <li><a href="">Chaitanya Gidwani</a></li>
+                </ol>
                 <input type="text" placeholder="Leave a comment or review">
                 <div class="comments"></div>
             </div>
@@ -46,22 +72,22 @@
         <div class="project">
             <div class="rightImg bgg2"></div>
             <div class="leftInfo">
-                <h1></h1>
-                <h2></h2>
-                <h3></h3>
-                <p></p>
-                <input type="text" placeholder="Leave a comment or review">
-                <div class="comments"></div>
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="rightImg bgg3"></div>
-            <div class="leftInfo">
-                <h1></h1>
-                <h2></h2>
-                <h3></h3>
-                <p></p>
+                <h1>Spotify Clone</h1>
+                <p>I tried to copy the Frontend of  the spotify ,I learned alot through this project such as the skill of the Time Management and How to efficiently use the different tags and tools in the Project</p>
+                    <h2>Technologies Used</h2>
+                    <p>The frontend of the platform is build with the help of the HTML ,Css And the resposiveness is improved with the help  of the Javascript </p>
+                    <p>The Backend is Still need to be done</p>
+                <h3>Key Features</h3>
+                <p>The platform is approximetly same as the Spotify original FrontEnd </p>
+                <ol>
+                    <li>Have Music button to play</li>
+                    <li>Nav bar with the different sections</li>
+                </ol>
+                <h3>Active Contributors</h3>
+                <ol class="contribb">
+                    <li><a href="">Ayush Thakur</a></li>
+                    <li><a href="">Chaitanya Gidwani</a></li>
+                </ol>
                 <input type="text" placeholder="Leave a comment or review">
                 <div class="comments"></div>
             </div>
@@ -69,7 +95,7 @@
 
      
         <div class="project">
-            <div class="rightImg bgg4"></div>
+            <div class="rightImg bgg1"></div>
             <div class="leftInfo">
                 <h1>FARMINGOO</h1>
                 <p>FARMINGOO is an innovative platform bridging the gap between the primary and tertiary sectors through modern technology.</p>
@@ -152,6 +178,29 @@
                 });
             });
         });
+        
+var fg = document.querySelector(".navliii");
+
+function y() {
+    // Toggle the 'show' class to control visibility
+    fg.classList.toggle("show");
+
+    // Display the menu only when it is active
+    if (fg.classList.contains("show")) {
+        fg.style.display = "block"; 
+    } else {
+        fg.style.display = "none";
+    }
+}
+
+// Close menu when clicking a navigation link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        fg.classList.remove("show");
+        fg.style.display = "none"; 
+    });
+});
+
     </script>
     
 
