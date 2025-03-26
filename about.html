@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="whole.css">
     <link rel="stylesheet" href="about.css">
     <script src="script.js"></script>
- 
 </head>
 <body>
     <header>
@@ -23,8 +22,13 @@
                 </ul>
             </div>
         </nav>
+        <div class="navlii">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
     </header>
-
 
     <header class="studentOverview">
         <span class="nmg">Ayush Singh</span>
@@ -34,7 +38,6 @@
             <a href="mailto:ayush@example.com">Email</a> | <a href="https://www.linkedin.com/in/ayushsingh">LinkedIn</a> | <a href="https://github.com/ayushsingh">GitHub</a>
         </div>
     </header>
-
 
     <section class="wlc">
         <h3>Welcome to Ayush Singh's Portfolio</h3>
@@ -69,101 +72,81 @@
         </div>
     </section>
 
-    
     <section class="projects">
         <h1>Projects</h1>
         <div class="project">
-            <h3>Project Title 1</h3>
-            <p>A brief description of the project goes here. Include any technologies used, challenges faced, and outcomes achieved.</p>
+            <h3>Medical Facilities Website</h3>
+            <p>A modern, responsive website providing live doctor consultations, appointment booking, diet plans, and AI-powered medical support. Built using HTML, CSS, JavaScript, and Node.js.</p>
         </div>
         <div class="project">
-            <h3>Project Title 2</h3>
-            <p>A brief description of the project goes here. Include any technologies used, challenges faced, and outcomes achieved.</p>
+            <h3>AGRO TECH - FORMNGGE</h3>
+            <p>A platform connecting agriculture with technology, offering features like searching farming products, booking tools, AI assistance, weather forecasts, and land sharing. Developed in collaboration with a backend developer using various web technologies.</p>
         </div>
     </section>
 
     <section class="skills">
         <h1>Skills</h1>
         <div class="skill">
-            <h3>Technical Skill 1</h3>
-            <p>Detailed description of the technical skill, proficiency level, and how it was used in your academic or personal projects.</p>
+            <h3>Programming Languages</h3>
+            <p>Proficient in Java, Python, JavaScript, C, HTML, and CSS.</p>
         </div>
         <div class="skill">
-            <h3>Technical Skill 2</h3>
-            <p>Detailed description of the technical skill, proficiency level, and how it was used in your academic or personal projects.</p>
+            <h3>Frontend Development</h3>
+            <p>Experienced in HTML, CSS, and JavaScript for creating modern, responsive UI designs.</p>
+        </div>
+        <div class="skill">
+            <h3>Backend Development</h3>
+            <p>Exploring Django and Node.js with plans to specialize in Java backend development using Spring.</p>
+        </div>
+        <div class="skill">
+            <h3>Competitive Coding</h3>
+            <p>Solving problems on Leetcode, improving time efficiency and memory management in code.</p>
         </div>
     </section>
-
 
     <section class="experience">
         <h1>Experience</h1>
         <div class="work">
-            <h3>Internship at XYZ Company</h3>
-            <p>A brief description of the role, responsibilities, and skills gained during the internship or job experience.</p>
+            <h3>N/A</h3>
+            <p>Currently have no such Industry level Experience</p>
         </div>
     </section>
 
     <section class="certifications">
         <h1>Certifications</h1>
         <div class="certificate">
-            <h3>Certification Title 1</h3>
-            <p>Brief description of the certification and what knowledge or skill it represents.</p>
+            <h3>N/A</h3>
+            <p>Currently have no certifications</p>
         </div>
     </section>
 
-
     <div class="footer">
-        <p>Contact me via <a href="mailto:ayush@example.com" style="color: white;">email</a> for collaborations or inquiries.</p>
+        <p>Contact me via <a href="mailto:ayurajput249@gmail.com" style="color: white;">email</a> for collaborations or inquiries.</p>
         <p>&copy; 2025 Ayush Singh. All rights reserved.</p>
     </div>
+
 <script>
-
-
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
     let gf = document.querySelectorAll(".nav-link");
     let wrt = window.location.href;
-    gf.forEach(e=>{
-        if(wrt.includes(`${e.getAttribute("href")}`))
-    {
-        e.classList.add("active");
-    }
-        
-    })
-
-
-
-
-
-
-})
-
-   
-
-var fg = document.querySelector(".navliii");
-
-function y() {
-    // Toggle the 'show' class to control visibility
-    fg.classList.toggle("show");
-
-    // Display the menu only when it is active
-    if (fg.classList.contains("show")) {
-        fg.style.display = "block"; 
-    } else {
-        fg.style.display = "none";
-    }
-}
-
-// Close menu when clicking a navigation link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        fg.classList.remove("show");
-        fg.style.display = "none"; 
+    gf.forEach(e => {
+        if (wrt.includes(`${e.getAttribute("href")}`)) {
+            e.classList.add("active");
+        }
     });
 });
 
-
-
-
+var fgh = document.querySelector(".navlii");
+var click = false;
+function y() {
+    click = !click;
+    if (click) {
+        fgh.style.display = 'flex';
+    } else {
+        fgh.style.display = 'none';
+    }
+}
 </script>
+
 </body>
 </html>
