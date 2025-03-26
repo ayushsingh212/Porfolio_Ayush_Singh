@@ -11,7 +11,7 @@
 }
 
 .leftSection {
-    width: 30%;
+    min-width: 30%;
     font-size: 2.5rem;
     font-weight: bold;
 
@@ -37,7 +37,7 @@
 .secondSection {
     max-width: 80vw;
     margin: auto;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .secondSection .line {
@@ -72,8 +72,8 @@ main hr {
     padding: 1.5rem;
     background-color: grey;
     width: 20vw;
-    height: 20vw;
-    border-radius: 10%;
+    min-height: 20vw;
+    border-radius: 20px;
     overflow: scroll; 
     transition: 1s all 0.1ms ease-in-out;
 }
@@ -81,7 +81,7 @@ main hr {
 .know-box:hover {
     background-color:white;
     transform: scale(1.2, 1.2);
-    border-radius: 7%;
+    border-radius: 23px;
     color: black;
     font-size: 0.8rem;
 
@@ -129,16 +129,16 @@ main hr {
     .know-box {
         padding: 1.5rem;
         background-color: grey;
-        width: 20vh;
-        height: 30vh;
-        border-radius: 10%;
+        min-width: 80vw;
+        height: 50vh;
+        border-radius: 20px;
         overflow: scroll; 
         transition: 1s all 0.1ms ease-in-out;
     }
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
     .firstSection {
         flex-direction: column;
@@ -152,7 +152,7 @@ main hr {
         font-size: 2rem;
     }
     .rightSection {
-        width: 100%;
+        min-width: 100%;
     }
     .Developer-img {
         width: 100%;
