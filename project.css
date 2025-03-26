@@ -1,5 +1,6 @@
 body{
     min-height: 200vh;
+    overflow: none;
 }
 
 header .h11{
@@ -26,33 +27,32 @@ header .h22{
 
 }
 .maincont{
- 
+    padding-top: 7vh;
+    margin-top: 30vh;
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-     height: 170vw;
+    min-height: 200vw;
 }
 main .project{
     position: relative;
-  
-    width: 100%;
-    height: 24% ;
+    width: 100vw;
+    min-height: 45vw ;
     margin: auto;
     display: flex;
 }
 .project .rightImg {
     border-radius: 10px;
-    width: 45%;
-    height: 98%;
-    /* background-image: url("img/portfolio.png"); */
+    width: 42vw;
+    height: 40vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%; 
-    background-color: black;
+    background-color: white;
     margin: auto;
 }
 .bgg1{
-    background-image: url("img/music-player.png");
+    background-image: url("img/farmingoo.png");
 
 }
 .bgg2{
@@ -64,7 +64,7 @@ main .project{
 
 }
 .bgg4{
-    background-image: url("img/portfolio.png");
+    background-image: url("img/music-player.png");
 }
 
 .project .leftInfo{
@@ -74,11 +74,11 @@ main .project{
     color: black;
     padding: 1rem;
   border-radius: 10px;
-    width: 50%;
-    height: 98%;
+    width: 42vw;
+    height: 40vw;
     background-color:beige;
     margin: auto;
-    overflow: hidden;
+    overflow: scroll;
     transition: 
     transform 1s ease-in 1ms, 
     background-color 2s ease-out 0.5ms,
@@ -96,4 +96,34 @@ main .project{
     right: 3vw;
    background-color:  white;
    bottom: 3vw;
+}
+@media screen and (max-width:600px){
+    .maincont{
+        display: block;
+     
+    }
+    .right .show{
+        display: flex;
+    }
+    main .project{
+    
+        background-color: white;
+        min-width: 97%;
+        min-height: 70vh ;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 4vw;
+    }
+    .project .leftInfo{
+        
+       
+        width: 98vw;
+        height: 45vh;
+    }
+    .project .rightImg{
+    
+       height: 53vh;
+        width: 98vw;
+    }
 }
