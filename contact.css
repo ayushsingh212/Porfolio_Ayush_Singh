@@ -1,112 +1,151 @@
+:root {
+    --f: 1rem;
+    --primary-color: #007BFF;
+    --animation-duration: 2s;
+    --social-icon-size: calc(5 * var(--f));
+}
 
-.main-c{
-    position: relative;
+.main-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
     text-align: center;
-    justify-content: center;
+    max-width: 100vw;
 }
-.h1-c{
-    display: block;
-    margin: calc(6*var(--f)) 0;
+
+.h1-c {
+    margin: 3rem 0 1rem;
+    font-size: 2.5rem;
 }
-.h3-c{
-    display: block;
+
+.h3-c {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
-.centerBox{
-    justify-self: center;
+
+.centerBox {
     display: grid;
-    text-align: center;
-    gap: 1vw;
-    grid-template-rows: repeat(3,1fr);
-    width:  calc(50 * var(--f));
-    height: calc(40 * var(--f));
+    grid-template-columns: 1fr; /* Added */
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
-.btn1{
-   display: flex;
-   position: relative;
-   width: 70%;
-   justify-content:space-around;
-   align-items: center;
-   /* background-color: #007BFF; */
+
+.btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Social media icons */
+.social-icon {
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.insta {
+    background-image: url('img/insta.png'); 
+    
+    color: red;
+    background-size: contain;
+  
+    width: 50px;
+    height: 50px;
+   
+  
+}
+
+.gmail {
+    background-image: url('img/Gmail-Logo.png'); 
+    background-size: contain;
+      background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.wtsp {
+    background-image: url('img/whatsapp-png-logo-6.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+
+.hth {
+    position: relative;
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+    margin: 2rem auto;
+    border-radius: 50%;
+    background-image: url('./img/gh1-removebg-preview.png'); /* Ensure correct path */
+    background-size: contain;
+    animation: rotate3D var(--animation-duration) infinite linear;
+    transform-style: preserve-3d;
 }
 .ps1{
-    top: 0;
-    left: 0;
-}
-.ps2{
-    top: 0;
+    position: absolute;
+    top: 10vh;
     right: 0;
 }
-.hth {
-    text-align: center;
-    font-size: x-large;
-    font-weight: bold;
-    margin: auto;
+.ps2{
     position: absolute;
-    border: 1px solid black;
-    width:  calc(5 * var(--f));
-    height: calc(5 * var(--f));
-    color: white;
-    transform-style: preserve-3d; 
-    border-radius: 50%;
-    animation: rotate3D 2s infinite linear;
-    background-image: url('img/gh1-removebg-preview.png');
-    background-size: contain;
+    top: 10vh;
+    left: 0;
 }
-.container {
-    perspective: 1000px;
-}
-
-.imcc1{
-    
-    width: calc(3.5*var(--f));
-    height: calc(3.5*var(--f));
-}
-
-.insta{
-    background-image: url('img/insta.png');
-    width: calc(5*var(--f));
-    height: calc(5*var(--f));
-    border: 1px solid black;
-   background-position: center;
-   background-size: contain;
-}
-.gmail{
-    background-image: url('img/Gmail-Logo.png');
-    width: calc(5*var(--f));
-    height: calc(5*var(--f));
-    border: 1px solid black;
-    background-position: center;
-    background-size: contain;
-     background-repeat: no-repeat;
-}
-.wtsp{
-    background-image: url('img/whatsapp-png-logo-6.png');
-    width:  calc(5 * var(--f));
-    height: calc(5 * var(--f));
-    border: 1px solid black;
-    background-position: center;
-    background-size: contain;
-     background-repeat: no-repeat;
-}
-.cnct{
-    background-image: url('img/insta.png');
-    width: calc(5*var(--f));
-    height: calc(5*var(--f));
-    background-position: center;
-    background-size: contain;
-     background-repeat: no-repeat;
+.footer{
+    position: absolute;
 }
 @keyframes rotate3D {
     from {
         transform: rotateY(0deg);
-        width: calc(3*var(--f));
-        height: calc(3*var(--f));
-     
     }
     to {
         transform: rotateY(360deg);
-        width: calc(7*var(--f));
-        height: calc(7*var(--f));
-     
+    }
+}
+
+
+@media (max-width: 768px) {
+    :root {
+        --f: 0.8rem;
+    }
+    
+    .h1-c {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .h3-c {
+        font-size: 1.2rem;
+    }
+    
+    .centerBox {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .hth {
+        animation: none;
     }
 }
