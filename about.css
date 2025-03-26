@@ -10,6 +10,9 @@ header {
     
     position: relative;
 }
+.studentOverview{
+    margin-top: 20vh;
+}
 .stdImg {
     background-image: url('img/bkg.jpg');
     height: 150px;
