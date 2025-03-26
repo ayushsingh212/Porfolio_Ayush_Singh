@@ -23,8 +23,16 @@
                 </ul>
             </div>
         </nav>
+        <div class="navlii">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+             <a href="contact.html" class="nav-link">Contact</a>
+        </div>
     </header>
 
+               
+  
     <main class="main-c">
         <h1 class="h1-c">Contact me from any of the following...</h1>
         <h3 class="h3-c">My Social Media Handles:</h3>
@@ -57,7 +65,7 @@
     </main>
     
     <div class="footer">
-        <p>Contact me via <a href="mailto:ayush@example.com" style="color: white;">email</a> for collaborations or inquiries.</p>
+        <p>Contact me via <a href="mailto:ayurajput249@gmail.com" style="color: white;">email</a> for collaborations or inquiries.</p>
         <p>&copy; 2025 Ayush Singh. All rights reserved.</p>
     </div>
     <script>
@@ -84,28 +92,21 @@
             });
         });
         
-var fg = document.querySelector(".navliii");
 
+
+
+var fgh = document.querySelector(".navlii");
+var click =false;
 function y() {
-    // Toggle the 'show' class to control visibility
-    fg.classList.toggle("show");
-
-    // Display the menu only when it is active
-    if (fg.classList.contains("show")) {
-        fg.style.display = "block"; 
-    } else {
-        fg.style.display = "none";
-    }
+    click =!click;
+if(click){
+fgh.style.display ='flex';
+fgh.style.backgroundColor = "Black";
 }
-
-// Close menu when clicking a navigation link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        fg.classList.remove("show");
-        fg.style.display = "none"; 
-    });
-});
-
+else{
+fgh.style.display ='none';
+}
+}
     </script>
 </body>
 
